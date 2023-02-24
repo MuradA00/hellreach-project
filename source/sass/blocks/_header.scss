@@ -9,8 +9,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-    grid-gap: rem(16);
+    @include df;
+    grid-gap: rem(18);
   }
   &__burger {
     display: none;

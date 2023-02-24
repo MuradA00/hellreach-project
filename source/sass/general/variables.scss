@@ -59,7 +59,7 @@ $smallMobMq: 31.25em;
   justify-content: center;
   letter-spacing: var(--ls);
   background: var(--bg-btn);
-  padding: rem(8) 1rem;
+  padding: rem(10) 1rem;
   position: relative;
   span {
     font-size: rem(16);
@@ -73,7 +73,7 @@ $smallMobMq: 31.25em;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../img/btn/btn-overlay.png');
+    background-image: url('../../img/btn/red-btn-overlay.png');
     z-index: 4;
   }
 }
