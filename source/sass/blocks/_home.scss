@@ -80,7 +80,7 @@
       font-weight: 600;
       font-family: var(--ff-lora);
       letter-spacing: var(--ls);
-      transform: translateY(-3px);
+      transform: translateY(-6px);
     }
   }
 }
@@ -113,9 +113,10 @@
     }
     &__play {
       min-width: rem(200);
-      min-height: rem(100);
+      min-height: rem(80);
       span {
         font-size: 1rem;
+        transform: translateY(-2.5px);
       }
     }
     &__logo {
@@ -130,6 +131,7 @@
     &__body {
       min-height: rem(425);
     }
+
     &__logo {
       max-width: rem(350);
     }
