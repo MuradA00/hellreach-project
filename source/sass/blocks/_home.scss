@@ -66,8 +66,8 @@
     width: fit-content;
     display: grid;
     place-items: center;
-    min-width: rem(295);
-    min-height: rem(130);
+    min-width: rem(280);
+    min-height: rem(120);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: url('../../img/offer/btn-overlay.png');
@@ -80,7 +80,16 @@
       font-weight: 600;
       font-family: var(--ff-lora);
       letter-spacing: var(--ls);
-      transform: translateY(-6px);
+      transform: translateY(-5px);
+    }
+  }
+}
+
+@include max-width(90em) {
+  .home {
+    &__body {
+      padding-top: rem(120);
+      min-height: rem(575);
     }
   }
 }
@@ -108,7 +117,7 @@
       }
     }
     &__body {
-      min-height: rem(500);
+      min-height: rem(450);
       padding-top: rem(80);
     }
     &__play {
@@ -129,7 +138,7 @@
   .home {
     overflow: hidden;
     &__body {
-      min-height: rem(425);
+      min-height: rem(400);
     }
 
     &__logo {

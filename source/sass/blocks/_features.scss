@@ -36,6 +36,8 @@
     img {
       width: rem(120);
       height: rem(120);
+      border-radius: 50%;
+      object-position: center;
     }
   }
   &__card-name {

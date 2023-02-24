@@ -14,6 +14,14 @@
       width: rem(40);
       height: rem(40);
     }
+    &::after {
+      @include psevdo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(80);
+      height: rem(80);
+    }
     &::before {
       @include psevdo;
       top: 50%;
@@ -40,6 +48,27 @@
     width: calc((100% / 5) - 2px);
     @include df;
     grid-gap: 1rem;
+    &_offline {
+      .servers__row-icon {
+        &::after {
+          background: var(--bg-offline-icon);
+        }
+      }
+    }
+    &_soon {
+      .servers__row-icon {
+        &::after {
+          background: var(--bg-soon-icon);
+        }
+      }
+    }
+    &_online {
+      .servers__row-icon {
+        &::after {
+          background: var(--bg-online-icon);
+        }
+      }
+    }
     &_about {
       flex: 1;
       width: calc((100% / 3) - 2px);
@@ -75,7 +104,7 @@
   }
 }
 
-@include max-width(27.5em) {
+@include max-width(26.25em) {
   .servers {
     &__row-item {
       width: 100%;
