@@ -1,0 +1,84 @@
+.servers {
+  position: relative;
+  z-index: 20;
+  &__name {
+    font-size: rem(24);
+    font-weight: 600;
+    font-family: var(--ff-lora);
+    margin-bottom: rem(8);
+  }
+  &__row-icon {
+    position: relative;
+    height: rem(40);
+    img {
+      width: rem(40);
+      height: rem(40);
+    }
+    &::before {
+      @include psevdo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 1px solid hsla(0, 0%, 100%, 0.1);
+    }
+  }
+  &__state {
+    font-weight: 500;
+    color: var(--clr-light-300);
+    line-height: 130%;
+  }
+  &__row {
+    display: flex;
+    grid-gap: 2px;
+    flex-wrap: wrap;
+  }
+  &__row-item {
+    padding: rem(20) rem(24);
+    background-color: hsla(169, 7%, 9%, 1);
+    width: calc((100% / 5) - 2px);
+    @include df;
+    grid-gap: 1rem;
+    &_about {
+      flex: 1;
+      width: calc((100% / 3) - 2px);
+      justify-content: flex-end;
+      padding: rem(30) rem(40);
+    }
+  }
+}
+
+@include max-width($tabletMq) {
+  .servers {
+    &__name {
+      font-size: rem(20);
+    }
+    &__state {
+      font-size: rem(14);
+    }
+    &__row-item {
+      width: calc((100% / 3) - 2px);
+      &_about {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .servers {
+    &__row-item {
+      width: calc((100% / 2) - 2px);
+      padding: rem(15);
+    }
+  }
+}
+
+@include max-width(27.5em) {
+  .servers {
+    &__row-item {
+      width: 100%;
+    }
+  }
+}

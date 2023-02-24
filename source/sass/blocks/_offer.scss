@@ -28,8 +28,13 @@
     background: url('../../img/offer/btn-overlay.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    transition: 300ms ease;
+    &:hover {
+      transform: scale(1.02);
+    }
     background-position: center;
     span {
+      text-transform: uppercase;
       transform: translateY(-5px);
       font-size: rem(20);
       font-weight: 600;
@@ -43,13 +48,15 @@
 
 @include max-width($mobMq) {
   .offer {
-    min-height: rem(400);
+    min-height: rem(350);
     &__descr {
       font-size: rem(14);
     }
     &__create-acc {
+      max-width: rem(200);
       min-width: rem(200);
       min-height: rem(90);
+      margin: 0 auto;
       span {
         transform: translateY(-3px);
         font-size: rem(16);

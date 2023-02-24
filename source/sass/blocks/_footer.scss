@@ -1,5 +1,7 @@
 .footer {
   background: var(--bg-footer);
+  position: relative;
+  z-index: 20;
   &__body {
     padding: rem(48) 0 2rem;
     display: flex;
@@ -55,12 +57,16 @@
   .footer {
     &__body {
       grid-gap: rem(35);
+      padding: rem(20) 0;
     }
     &__logos {
       grid-gap: 1rem;
     }
     &__top {
       padding-bottom: rem(30);
+    }
+    &__copy {
+      font-size: rem(12);
     }
     &__row {
       flex-direction: column;

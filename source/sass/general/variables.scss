@@ -5,6 +5,7 @@
     // COLORS
     --bg-body: hsla(180, 4%, 5%, 1);
     --bg-footer: linear-gradient(180deg, #101212 0%, #151818 100%);
+    --home-fade: linear-gradient(360deg, #0D0E0E 9.91%, rgba(13, 14, 14, 0) 42.73%);
     --card-fade: linear-gradient(360deg, rgba(22, 26, 25, 0.6) 0%, rgba(22, 26, 25, 0) 69.38%);
     --news-card-heading: hsla(228, 3%, 68%, 1);
     --comm-block-fade: linear-gradient(90.04deg, #161A19 0.04%, rgba(22, 26, 25, 0) 58.61%);
@@ -13,7 +14,9 @@
     --clr-light-400: hsla(0, 0%, 100%, 1);
     --clr-light-300: hsla(228, 3%, 68%, 1);
     --bg-offer-btn: linear-gradient(0.48deg, #E93D25 -10.64%, #B11414 94.89%, #DB3A24 94.95%, #E24523 99.33%);
-
+    --header-shadow: 0px 8px 48px 0px hsla(0, 0%, 0%, 0.08);
+    --bg-header: linear-gradient(180deg, #101212 0%, #161919 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
     // OTHERS
     --ls: 0.01em;
 }

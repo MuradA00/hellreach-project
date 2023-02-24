@@ -1,0 +1,134 @@
+.header {
+  position: relative;
+  min-height: rem(64);
+  display: flex;
+  align-items: center;
+  background: var(--bg-header);
+  box-shadow: var(--header-shadow);
+  &__options {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    grid-gap: rem(16);
+  }
+  &__burger {
+    display: none;
+    grid-gap: rem(7);
+    span {
+      border-radius: 5px;
+      display: block;
+      width: rem(28);
+      height: 2px;
+      background-color: var(--clr-light-400);
+    }
+  }
+  &__login {
+    color: var(--clr-light-300);
+    letter-spacing: var(--ls);
+    font-weight: 500;
+  }
+  &__row {
+    max-width: rem(1064);
+    margin: 0 auto;
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease;
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.04);
+    }
+  }
+  &__navigation {
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    ul {
+      display: flex;
+      li {
+        a {
+          padding: rem(20) 2rem;
+          color: var(--clr-light-300);
+          font-weight: 500;
+          line-height: 150%;
+          transition: 300ms ease;
+          &:hover {
+            color: var(--clr-light-400);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include max-width(85.375em) {
+  .header {
+    &__row {
+      max-width: rem(750);
+    }
+    &__logo {
+      max-width: rem(120);
+      left: 51%;
+    }
+    nav {
+      ul {
+        a {
+          padding: rem(10) 1rem;
+          font-size: rem(15);
+        }
+      }
+    }
+  }
+}
+
+@include max-width($tabletMq) {
+  .header {
+    min-height: rem(50);
+    &__navigation {
+      display: none;
+    }
+    &__options {
+      display: none;
+    }
+    &__row {
+      max-width: 100%;
+      @include df;
+      justify-content: space-between;
+    }
+    &__logo {
+      transform: translate(0);
+      position: initial;
+    }
+    &__burger {
+      display: grid;
+    }
+  }
+}
+
+@include min-width(121em) {
+  .header {
+    &__options {
+      right: 22.5%;
+    }
+  }
+}
+
+@include max-width(150em) {
+  .header {
+    &__options {
+      right: 10%;
+    }
+  }
+}
+
+@include max-width(120em) {
+  .header {
+    &__options {
+      right: 2rem;
+    }
+  }
+}
