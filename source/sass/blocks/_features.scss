@@ -1,0 +1,43 @@
+.features {
+  &__row {
+    display: flex;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: rem(48) 2rem;
+    background-color: var(--bg-features-card);
+    box-shadow: 0px 8px 48px 0px hsla(0, 0%, 0%, 0.08);
+
+  }
+  &__info {
+    flex: 1;
+    @include df;
+    text-align: center;
+    flex-direction: column;
+  }
+  &__descr {
+    flex: 1;
+  }
+  &__card-icon {
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 4px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-bottom: rem(35);
+    img {
+      width: rem(120);
+      height: rem(120);
+    }
+  }
+  &__card-name {
+    font-size: rem(24);
+    font-weight: 600;
+    font-family: var(--ff-lora);
+    margin-bottom: rem(8);
+  }
+}

@@ -1,0 +1,123 @@
+.news {
+  &__row {
+    display: flex;
+    grid-gap: rem(25);
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  &__row-block {
+    min-height: rem(480);
+    width: calc((100% / 4) - 17px);
+    padding: rem(45) 2rem;
+    display: grid;
+    align-items: flex-end;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::after {
+      @include psevdo;
+      left: 0;
+      bottom: 0;
+      background: var(--card-fade);
+      width: 100%;
+      height: rem(240);
+      z-index: 5;
+    }
+    &_large {
+      width: calc((100% / 2) - 17px);
+    }
+    &:nth-child(1) {
+      background-image: url('../../img/news-section/news-image-1.png');
+    }
+    &:nth-child(2) {
+      background-image: url('../../img/news-section/news-image-2.png');
+    }
+    &:nth-child(3) {
+      background-image: url('../../img/news-section/news-image-3.png');
+    }
+    &:nth-child(4) {
+      background-image: url('../../img/news-section/news-image-2.png');
+    }
+    &:nth-child(5) {
+      background-image: url('../../img/news-section/news-image-1.png');
+    }
+    &:nth-child(6) {
+      background-image: url('../../img/news-section/news-image-2.png');
+    }
+  }
+  &__row-info {
+    position: relative;
+    z-index: 10;
+  }
+  &__row-info-heading {
+    color: var(--news-card-heading);
+    font-size: rem(14);
+    margin-bottom: rem(8);
+  }
+  &__row-info-descr {
+    p {
+      color: var(--clr-light-400);
+      font-size: rem(24);
+      @include max-width($tabletMq) {
+        font-size: rem(20);
+      }
+      @include max-width($mobMq) {
+        font-size: rem(18);
+      }
+    }
+  }
+  &__show-more {
+    margin-left: auto;
+    text-align: center;
+    @include df;
+    background: rgba(255, 255, 255, 0.04);
+    letter-spacing: var(--ls);
+    font-weight: 500;
+    padding: rem(8) 1rem;
+    color: hsla(228, 3%, 68%, 1);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+  }
+}
+
+@include max-width($tabletMq) {
+  .news {
+    &__show-more {
+      margin: 0 auto;
+    }
+    &__row {
+      grid-gap: rem(15);
+    }
+    &__row-block {
+      min-height: rem(350);
+      padding: rem(20);
+      width: calc((100% / 2) - 8px);
+      &_full {
+        width: 100%;
+        background-position: top;
+      }
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .news {
+    &__row-block {
+      min-height: rem(300);
+      &:nth-child(3) {
+        background-position: top;
+      }
+      &::after {
+        height: rem(200);
+      }
+    }
+  }
+}
+
+@include max-width($smallMobMq) {
+  .news {
+    &__row-block {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.community {
+  &__body {
+    background-color: hsla(169, 7%, 9%, 1);
+    padding: rem(48) 2rem;
+    background-image: url('../../img/community-section/community-image.png');
+    background-size: rem(780) 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after {
+      @include psevdo;
+      right: 0;
+      top: 0;
+      width: rem(780);
+      height: 100%;
+      background: var(--comm-block-fade);
+    }
+  }
+  &__inner {
+    max-width: rem(520);
+  }
+  &__info {
+    margin-bottom: rem(32);
+    position: relative;
+    z-index: 5;
+  }
+  &__title {
+    font-size: rem(48);
+    font-weight: 600;
+    font-family: var(--ff-lora);
+    margin-bottom: 1rem;
+  }
+}
+
+@include max-width($tabletMq) {
+  .community {
+    &__body {
+      padding: rem(25);
+      background-size: cover;
+      &::after {
+        width: 100%;
+        background: linear-gradient(90.04deg, #161A19 0.04%, rgba(22, 26, 25, .6) 58.61%);;
+      }
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .community {
+    &__title {
+      font-size: rem(32);
+    }
+    &__info {
+      max-width: rem(320);
+      margin-bottom: 1rem;
+    }
+  }
+}

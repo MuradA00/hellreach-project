@@ -1,0 +1,73 @@
+:root {
+    /* -- Fonts --*/
+    --ff-inter: 'Inter', sans-serif;
+    --ff-lora: 'Lora', sans-serif;
+    // COLORS
+    --bg-body: hsla(180, 4%, 5%, 1);
+    --card-fade: linear-gradient(360deg, rgba(22, 26, 25, 0.6) 0%, rgba(22, 26, 25, 0) 69.38%);
+    --news-card-heading: hsla(228, 3%, 68%, 1);
+    --comm-block-fade: linear-gradient(90.04deg, #161A19 0.04%, rgba(22, 26, 25, 0) 58.61%);
+    --bg-features-card: hsla(169, 7%, 9%, 1);
+    --bg-btn: linear-gradient(360deg, #51140C 0%, #9B2818 4.69%, #E93D25 4.7%, #B11414 95.77%, #DB3A24 95.83%, #E24523 99.81%);
+    --clr-light-400: hsla(0, 0%, 100%, 1);
+    // OTHERS
+    --ls: 0.01em;
+}
+
+$container-width: rem(1380);
+$cont-padding: clamp(15px, vw(20), 20px);
+$mainMq: 81.25em;
+$tabletMq: 71.875em;
+$mobMq: 48em;
+$smallMobMq: 31.25em;
+
+.main-container {
+  padding: 0 $cont-padding;
+  max-width: calc($container-width + $cont-padding);
+  margin-inline: auto;
+  width: 100%;
+  @include max-width($mainMq) {
+    max-width: calc(75rem + $cont-padding);
+  }
+  @include max-width($tabletMq) {
+    max-width: calc(50rem + $cont-padding);
+  }
+  @include max-width($mobMq) {
+    max-width: calc(rem(550) + $cont-padding);
+  }
+}
+
+.section-margin {
+  margin-bottom: rem(140);
+  @include max-width($mobMq) {
+    margin-bottom: rem(70);
+  }
+}
+
+.btn {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: var(--ls);
+  background: var(--bg-btn);
+  padding: rem(8) 1rem;
+  position: relative;
+  span {
+    font-size: rem(16);
+    font-weight: 500;
+    position: relative;
+    z-index: 10;
+  }
+  &::before {
+    @include psevdo;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../img/btn/btn-overlay.png');
+    z-index: 4;
+  }
+}
+
+
