@@ -4,12 +4,16 @@
     --ff-lora: 'Lora', sans-serif;
     // COLORS
     --bg-body: hsla(180, 4%, 5%, 1);
+    --bg-footer: linear-gradient(180deg, #101212 0%, #151818 100%);
     --card-fade: linear-gradient(360deg, rgba(22, 26, 25, 0.6) 0%, rgba(22, 26, 25, 0) 69.38%);
     --news-card-heading: hsla(228, 3%, 68%, 1);
     --comm-block-fade: linear-gradient(90.04deg, #161A19 0.04%, rgba(22, 26, 25, 0) 58.61%);
     --bg-features-card: hsla(169, 7%, 9%, 1);
     --bg-btn: linear-gradient(360deg, #51140C 0%, #9B2818 4.69%, #E93D25 4.7%, #B11414 95.77%, #DB3A24 95.83%, #E24523 99.81%);
     --clr-light-400: hsla(0, 0%, 100%, 1);
+    --clr-light-300: hsla(228, 3%, 68%, 1);
+    --bg-offer-btn: linear-gradient(0.48deg, #E93D25 -10.64%, #B11414 94.89%, #DB3A24 94.95%, #E24523 99.33%);
+
     // OTHERS
     --ls: 0.01em;
 }
@@ -33,6 +37,7 @@ $smallMobMq: 31.25em;
     max-width: calc(50rem + $cont-padding);
   }
   @include max-width($mobMq) {
+    padding: 0 rem(15);
     max-width: calc(rem(550) + $cont-padding);
   }
 }

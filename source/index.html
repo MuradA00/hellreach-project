@@ -6,9 +6,16 @@
   @@include('_header.html',{})
 
   <main>
+    <div class="sparks-wrapper">
+      <picture>
+        <source type="image/webp" srcset="img/bottom-sparks.webp">
+        <img src="img/bottom-sparks.png" alt="sparks">
+      </picture>
+    </div>
     @@include('_news.html',{})
     @@include('_community.html',{})
     @@include('_features.html',{})
+    @@include('_offer.html',{})
   </main>
 
   @@include('_footer.html',{})

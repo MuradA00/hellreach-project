@@ -2,6 +2,10 @@ const cards = new Swiper('.features__inner', {
   spaceBetween: 24,
   slidesPerView: 1,
   loop: true,
+  navigation: {
+    nextEl: '.features__arrow_next',
+    prevEl: '.features__arrow_prev'
+  },
   breakpoints: {
     768: {
       slidesPerView: 2

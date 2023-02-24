@@ -1,0 +1,59 @@
+.offer {
+  min-height: rem(600);
+  background-image: url('../../img/offer/bg-offer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+  z-index: 20;
+  &__body {
+    @include df;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__descr {
+    max-width: rem(318);
+
+    letter-spacing: var(--ls);
+    margin: 0 auto rem(20);
+  }
+  &__create-acc {
+    min-width: rem(363);
+    min-height: rem(131);
+    @include dfc;
+    text-align: center;
+    position: relative;
+    background: url('../../img/offer/btn-overlay.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    span {
+      transform: translateY(-5px);
+      font-size: rem(20);
+      font-weight: 600;
+      font-family: var(--ff-lora);
+      letter-spacing: var(--ls);
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .offer {
+    min-height: rem(400);
+    &__descr {
+      font-size: rem(14);
+    }
+    &__create-acc {
+      min-width: rem(200);
+      min-height: rem(90);
+      span {
+        transform: translateY(-3px);
+        font-size: rem(16);
+      }
+    }
+  }
+}
