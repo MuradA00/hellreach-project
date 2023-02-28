@@ -27,6 +27,10 @@
     color: var(--clr-light-300);
     letter-spacing: var(--ls);
     font-weight: 500;
+    transition: 200ms ease;
+    &:hover {
+      color: var(--clr-light-400);
+    }
   }
   &__row {
     max-width: rem(1064);
@@ -128,7 +132,7 @@
 @include max-width(120em) {
   .header {
     &__options {
-      right: 2rem;
+      right: 1rem;
     }
   }
 }

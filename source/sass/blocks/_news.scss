@@ -14,9 +14,13 @@
     display: grid;
     align-items: flex-end;
     position: relative;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    transition: 200ms ease;
+    &:hover {
+      background-size: 107.5% 107.5%;
+    }
     &::after {
       @include psevdo;
       left: 0;
@@ -79,6 +83,13 @@
     padding: rem(8) 1rem;
     color: hsla(228, 3%, 68%, 1);
     border: 1px solid hsla(0, 0%, 100%, 0.1);
+    transition: 200ms ease;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid hsla(0, 0%, 100%, 0.5);
+      color: #fff;
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -94,6 +105,10 @@
       min-height: rem(350);
       padding: rem(20);
       width: calc((100% / 2) - 8px);
+      background-size: cover;
+      &:hover {
+        background-size: cover;
+      }
       &_full {
         width: 100%;
         background-position: top;
