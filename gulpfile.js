@@ -73,7 +73,7 @@ gulp.task("refresh", (done) => {
 
 
 gulp.task("raster images", () => {
-  return gulp.src("build/img/*.{png,jpg,jpeg}")
+  return gulp.src("build/img/*.{png,jpg,jpeg,webm,mp4}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 2}),
       imagemin.mozjpeg({quality: 75, progressive: true})
@@ -128,7 +128,7 @@ gulp.task("html", () => {
 gulp.task("copy", () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**/*.{png,jpg,jpeg,svg,gif}",
+      "source/img/**/*.{png,jpg,jpeg,svg,gif,wemb,mp4}",
       "source/*.ico"
     ], {
       base: "source"

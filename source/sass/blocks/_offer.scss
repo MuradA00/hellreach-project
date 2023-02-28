@@ -8,10 +8,17 @@
   place-items: center;
   position: relative;
   z-index: 20;
+  &__video {
+    video {
+      height: 100%;
+    }
+  }
   &__body {
     @include df;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
   &__descr {
     max-width: rem(318);
