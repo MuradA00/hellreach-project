@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__options">
-    <a href="#" class="header__login">
-      Login
+    <a href="#" class="header__login btn">
+      <span>Login</span>
     </a>
     <a href="#" class="header__register btn"><span>
       Register
@@ -11,13 +11,21 @@
     <div class="header__row">
       <div class="header__navigation">
         <nav>
-          <ul>
+          <ul class="nav">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Account</a></li>
             <li><a href="#">Roadmap</a></li>
           </ul>
           <ul>
-            <li><a href="#">Keep Track</a></li>
+            <li class="nav__item nav__item_dropdown">
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item"><a href="#" class="dropdown__link">Bug Report</a></li>
+                  <li class="dropdown__item"><a href="#" class="dropdown__link">Release Notes</a></li>
+                </ul>
+              </div>
+              <a class="nav__link" href="#">Keep Track</a>
+            </li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Store</a></li>
           </ul>

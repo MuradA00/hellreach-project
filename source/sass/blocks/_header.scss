@@ -24,7 +24,6 @@
     }
   }
   &__login {
-    color: var(--clr-light-300);
     letter-spacing: var(--ls);
     font-weight: 500;
     transition: 200ms ease;
@@ -69,6 +68,19 @@
   }
 }
 
+.nav {
+  &__item {
+    &_dropdown {
+      position: relative;
+    }
+    &:hover .dropdown {
+      transform: translateY(0);
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}
+
 @include max-width(85.375em) {
   .header {
     &__row {
@@ -79,6 +91,7 @@
       left: 51%;
     }
     nav {
+      justify-content: space-between !important;
       ul {
         a {
           padding: rem(10) 1rem;
@@ -116,7 +129,7 @@
 @include min-width(121em) {
   .header {
     &__options {
-      right: 22.5%;
+      right: 15.5%;
     }
   }
 }
@@ -133,6 +146,26 @@
   .header {
     &__options {
       right: 1rem;
+    }
+  }
+}
+
+@include max-width(92.5em) {
+  .header {
+    &__options {
+      right: .5rem;
+    }
+    &__navigation {
+      nav {
+        justify-content: space-around;
+      }
+      ul {
+        li {
+          a {
+            padding: rem(10);
+          }
+        }
+      }
     }
   }
 }

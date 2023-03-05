@@ -1,0 +1,25 @@
+.dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  transition: 400ms ease;
+  --dropdown-border-clr: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+  &__list {
+    box-shadow: var(--header-shadow);
+    border-bottom: 1px solid var(--dropdown-border-clr);
+    border-left: 1px solid var(--dropdown-border-clr);
+    border-right: 1px solid var(--dropdown-border-clr);
+    background-image: var(--bg-header);
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    display: block;
+    padding: rem(15) rem(20) !important;
+    font-size: rem(15);
+    text-align: center;
+  }
+}

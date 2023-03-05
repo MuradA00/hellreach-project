@@ -7,9 +7,10 @@
   background-color: var(--bg-body);
   z-index: 1000;
   border-left: 1px solid rgba(255, 255, 255, .3);
-  transition: 400ms ease 400ms;
+  transition: 300ms ease 400ms;
   transform: translateX(100%);
   visibility: hidden;
+  overflow-y: scroll;
   &__close {
     position: absolute;
     right: 1.5rem;
@@ -68,9 +69,51 @@
     font-weight: 500;
     font-size: rem(20);
   }
+  &__item {
+    &_dropdown {
+      height: fit-content;
+      grid-gap: 0 rem(10);
+      span {
+        font-weight: 500;
+        font-size: rem(20);
+      }
+      flex-wrap: wrap;
+      @include df;
+      img {
+        width: rem(10);
+        height: rem(6);
+        transition: 400ms ease;
+      }
+    }
+  }
+}
+
+.menu-dropdown {
+  transition: 500ms ease;
+  overflow: hidden;
+  max-height: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-gap: rem(10);
+  a {
+    font-size: rem(18);
+    font-weight: 500;
+  }
 }
 
 .show-menu {
   visibility: visible;
   transform: translateX(0);
+}
+
+.active-dropdown {
+  img {
+    transform: scaleY(-1);
+  }
+}
+
+.collapse-menu-dropdown {
+  max-height: rem(250);
+  padding-top: rem(10);
 }

@@ -3,7 +3,14 @@ const closeIcon = document.querySelector('.menu__close'),
       navLinks = document.querySelectorAll('.menu-nav__link'),
       menu = document.querySelector('.menu'),
       body = document.body,
-      html = document.documentElement;
+      html = document.documentElement,
+      menuDropdown = document.querySelector('.menu-dropdown'),
+      menuDropdownTrigger = document.querySelector('.menu-nav__item_dropdown');
+
+menuDropdownTrigger.addEventListener('click', function(){
+  this.classList.toggle('active-dropdown')
+  menuDropdown.classList.toggle('collapse-menu-dropdown')
+})
 
 function closeMenuByClick() {
   if (navLinks.length > 0) {
