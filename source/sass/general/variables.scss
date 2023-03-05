@@ -82,19 +82,18 @@ $smallMobMq: 31.25em;
   }
   &::after {
     @include psevdo;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .35);
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: 400ms ease;
     top: 0;
     left: 0;
     z-index: 7;
-    visibility: hidden;
   }
   &:hover::after {
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
   }
   &::before {
     @include psevdo;

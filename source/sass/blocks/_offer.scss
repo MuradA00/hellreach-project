@@ -10,7 +10,7 @@
   z-index: 20;
   &__video {
     video {
-      height: 200%;
+      height: 200%  ;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -39,7 +39,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: 400ms ease;
-    filter: brightness(70%);
+    filter: brightness(82.5%);
     &:hover {
       filter: brightness(100%);
     }

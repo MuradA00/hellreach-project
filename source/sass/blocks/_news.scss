@@ -14,12 +14,13 @@
     display: grid;
     align-items: flex-end;
     position: relative;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: 200ms ease;
+    filter: brightness(82.5%);
     &:hover {
-      background-size: 107.5% 107.5%;
+      filter: brightness(100%);
     }
     &::after {
       @include psevdo;

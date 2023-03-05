@@ -53,12 +53,13 @@
     ul {
       display: flex;
       li {
-        a {
+        a, span {
           padding: rem(20) 2rem;
           color: var(--clr-light-300);
           font-weight: 500;
           line-height: 150%;
           transition: 300ms ease;
+          cursor: pointer;
           &:hover {
             color: var(--clr-light-400);
           }
@@ -69,6 +70,23 @@
 }
 
 .nav {
+  &__arrow {
+    display: block;
+    width: rem(7);
+    transition: 400ms ease;
+    height: rem(6);
+  }
+  &__link {
+    &_dropdown-link {
+      &:hover {
+        img {
+          transform: scaleY(-1);
+        }
+      }
+      @include df;
+      grid-gap: rem(7);
+    }
+  }
   &__item {
     &_dropdown {
       position: relative;
