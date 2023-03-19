@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body>
+  @@include('_modal-login.html',{})
+  @@include('_modal-register.html',{})
+  @@include('_modal-success.html',{})
+  @@include('_header.html',{})
+  @@include('_menu.html',{})
+  <div class="sparks-wrapper">
+    <picture>
+      <source type="image/webp" srcset="img/bottom-sparks.webp">
+      <img src="img/bottom-sparks.png" alt="sparks">
+    </picture>
+  </div>
+  <main class="main-padding news-body">
+    <section class="news news-list section-margin">
+      <div class="news__container main-container">
+        <div class="news__body">
+          <h1 class="news-list__title news__title main-title">
+            Latest news
+          </h1>
+          <ul class="news__row">
+            <a href="#" target="_blank" class="news__row-block news__row-block_large">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  January 22, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Fury of the Sunwell
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="#" target="_blank" class="news__row-block">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  January 22, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Opening Legion
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="#" target="_blank" class="news__row-block news__row-block_full">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  January 22, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Updatepack 57
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a style="background-image: url('img/news-section/news-image-4.png');" href="#" target="_blank" class="news__row-block">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  December 16, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Opening Legion
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a style="background-image: url('img/news-section/news-image-5.png');" href="#" target="_blank" class="news__row-block">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  December 16, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Updatepack 57
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a style="background-image: url('img/news-section/news-image-6.png');" href="#" target="_blank" class="news__row-block news__row-block_large news__row-block_full">
+              <div class="news__row-info">
+                <div class="news__row-info-heading">
+                  January 22, 2023
+                </div>
+                <div class="news__row-info-descr">
+                  <p>
+                    Fury of the Sunwell
+                  </p>
+                </div>
+              </div>
+            </a>
+          </ul>
+          <button class="news__show-more news__show-more_full">
+            Show more
+          </button>
+        </div>
+      </div>
+    </section>
+
+    @@include('_community.html',{})
+    @@include('_offer.html',{})
+  </main>
+
+  @@include('_footer.html',{})
+  <script src="js/_modals.js"></script>
+  <script src="js/_burger.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/featuresSlider.js"></script>
+</body>
+
+</html>

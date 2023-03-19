@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body>
+  @@include('_modal-login.html',{})
+  @@include('_modal-register.html',{})
+  @@include('_modal-success.html',{})
+  @@include('_header.html',{})
+  @@include('_menu.html',{})
+  <div class="sparks-wrapper">
+    <picture>
+      <source type="image/webp" srcset="img/bottom-sparks.webp">
+      <img src="img/bottom-sparks.png" alt="sparks">
+    </picture>
+  </div>
+  <main class="main-padding news-body">
+
+    <section class="tracker section-margin">
+      <div class="tracker__container main-container">
+        <div class="tracker__body">
+          <h1 class="tracker__title main-title">
+            Bug tracker
+          </h1>
+          <div class="tracker__table">
+            <div class="tracker__dropdowns">
+              <ul class="dropdowns">
+                <li class="dropdowns__item">
+                  <div class="dropdowns__item-selected">
+                    <span>
+                      Select a priority
+                    </span>
+                    <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                  </div>
+                  <ul class="dropdowns__hidden">
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdowns__item">
+                  <div class="dropdowns__item-selected">
+                    <span>
+                      Select a priority
+                    </span>
+                    <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                  </div>
+                  <ul class="dropdowns__hidden">
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdowns__item">
+                  <div class="dropdowns__item-selected">
+                    <span>
+                      Select a priority
+                    </span>
+                    <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                  </div>
+                  <ul class="dropdowns__hidden">
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdowns__item">
+                  <div class="dropdowns__item-selected">
+                    <span>
+                      Select a priority
+                    </span>
+                    <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                  </div>
+                  <ul class="dropdowns__hidden">
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                    <li class="dropdowns__hidden-item">
+                      Priority
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="tracker__filter">
+              <div class="tracker__search">
+                <input type="search" placeholder="Search">
+                <div class="tracker__search-icon">
+                  <img src="img/sprite/search-icon.svg" alt="search-icon">
+                </div>
+              </div>
+              <div class="tracker__filter-options">
+                <div class="tracker__check">
+                  <input id="closed-requests" type="checkbox">
+                  <label for="closed-requests">
+                    Display closed requests
+                  </label>
+                </div>
+                <div class="tracker__buttons">
+                  <button class="tracker__reset" id="reset">
+                    <span>Reset</span>
+                  </button>
+                  <button class="tracker__create btn" id="create">
+                    <span>Create request</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr class="table__head">
+                  <th class="table__head-cell">
+                    ID
+                  </th>
+                  <th class="table__head-cell">
+                    Title
+                  </th>
+                  <th class="table__head-cell">
+                    Realm
+                  </th>
+                  <th class="table__head-cell">
+                    Category
+                  </th>
+                  <th class="table__head-cell">
+                    Subcategory
+                  </th>
+                  <th class="table__head-cell">
+                    Status
+                  </th>
+                  <th class="table__head-cell">
+                    Priority
+                  </th>
+                  <th class="table__head-cell">
+                    Changed
+                  </th>
+                  <th class="table__head-cell">
+                    Updated
+                  </th>
+                  <th class="table__head-cell">
+                    Created
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="ID" class="table__data">
+                    <span>3077</span>
+                  </td>
+                  <td data-label="Title" class="table__data">
+                    <span>Alchemy - Lining the Crucible</span>
+                  </td>
+                  <td data-label="Realm" class="table__data">
+                    <span>Dark Angel</span>
+                  </td>
+                  <td data-label="Category" class="table__data">
+                    <span>Professions</span>
+                  </td>
+                  <td data-label="Subcategory" class="table__data">
+                    <span>Undefined</span>
+                  </td>
+                  <td data-label="Status" class="table__data">
+                    <span>New report</span>
+                  </td>
+                  <td data-label="Priority" class="table__data">
+                    <span>High</span>
+                  </td>
+                  <td data-label="Changed" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                  <td data-label="Updated" class="table__data">
+                    <span>Stixjeat</span>
+                  </td>
+                  <td data-label="Created" class="table__data">
+                    <span>22.03.2023</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagination">
+              <div class="pagination__row">
+                <span class="pagination__page">
+                  Page
+                </span>
+                <div class="pagination__order">
+                  <span>1</span>
+                  <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+                </div>
+                <span class="pagination__left">of 10</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    @@include('_offer.html',{})
+  </main>
+
+  @@include('_footer.html',{})
+  <script src="js/_modals.js"></script>
+  <script src="js/_burger.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/featuresSlider.js"></script>
+</body>
+
+</html>

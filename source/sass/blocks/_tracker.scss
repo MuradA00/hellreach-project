@@ -1,0 +1,97 @@
+.tracker {
+  --search-icon-r: 1.5rem;
+  &__table {
+    background-color: rgba(var(--pr-clr), 1);
+    padding: 2rem 2rem 4rem 2rem;
+    border: 1px solid rgba(var(--w-clr), 0.05);
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: clamp(25px, 2.875vw, 46px);
+  }
+  &__dropdowns {
+    margin-bottom: 1rem;
+  }
+  &__filter {
+    @include fl(row, center, 3rem);
+    justify-content: space-between;
+    margin-bottom: clamp(1.25rem, 2vw, 32px);
+  }
+  &__filter-options {
+    @include fl(row, center, 24px);
+  }
+  &__buttons {
+    @include fl(row, center, 8px);
+  }
+  &__reset {
+    background-color: rgba(var(--w-clr), 0.04);
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(var(--w-clr), .1);
+    transition: 200ms ease;
+    &:hover {
+      background-color: rgba(var(--w-clr), .1);
+      border: 1px solid rgba(var(--w-clr), .5);
+    }
+    span {
+      color: rgba(var(--gr-clr), 1);
+    }
+  }
+  &__create {
+    min-height: 3.375rem;
+  }
+  &__search {
+    flex: 1;
+    position: relative;
+    input {
+      border: 1px solid rgba(var(--w-clr), 0.04);
+      background-color: rgba(var(--w-clr), 0.02);
+      padding: 1rem 1rem 1rem 3rem;
+      -webkit-appearance: none;
+      color: rgba(var(--w-clr), .4);
+      font-weight: 500;
+    }
+  }
+  &__search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: var(--search-icon-r);
+    img {
+      @include ratio(var(--search-icon-r));
+    }
+  }
+}
+
+@include max-width($tabletMq) {
+  .tracker {
+    &__table {
+      padding: 1.125rem 1.125rem 2.5rem 1.125rem;
+    }
+    &__search {
+      width: 100%;
+    }
+    &__filter-options {
+      width: 100%;
+      justify-content: space-between;
+    }
+    &__check {
+      label {
+        font-size: 12px;
+      }
+    }
+    &__filter {
+      flex-direction: column;
+      grid-gap: 1.25rem;
+    }
+  }
+}
+
+@include max-width($smallMobMq) {
+  .tracker {
+    &__filter-options {
+      grid-gap: 1.125rem;
+      flex-direction: column;
+    }
+  }
+}

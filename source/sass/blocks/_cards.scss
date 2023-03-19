@@ -1,0 +1,65 @@
+.cards {
+  display: flex;
+  &__item {
+    transform: translateX(-20%) !important;
+    &:nth-child(2n+1) {
+      flex-direction: column;
+    }
+    @include fl(column-reverse, center, 1.5rem);
+  }
+  &__inner {
+    min-height: 25rem;
+    padding: clamp(2rem, 3vw, 48px) clamp(1.125rem, 1.75vw, 1.75rem);
+    box-shadow: 0px 8px 48px 0px rgba(0, 0, 0, 0.08);
+    background-color: rgba(var(--pr-clr), 1);
+    text-align: center;
+    border: 1px solid rgba(var(--w-clr), .05);
+  }
+  &__date {
+    color: rgba(var(--gr-clr), 1);
+    letter-spacing: var(--ls);
+  }
+  &__icon {
+    margin: 0 auto 2rem auto;
+    @include ratio(8rem);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--w-clr), 0.1);
+    img, svg, picture {
+      border-radius: 50%;
+      overflow: hidden;
+      @include ratio(7.5rem);
+    }
+  }
+  &__card-name {
+    margin-bottom: 8px;
+  }
+  &__name {
+    font-family: var(--ff-lora);
+    font-size: clamp(18px, 1.5vw, 24px);
+    margin-bottom: 9px;
+  }
+}
+
+@include max-width($tabletMq) {
+  .cards {
+    &__inner {
+      min-height: 22.5rem;
+    }
+  }
+}
+
+@include max-width($mobMq) {
+  .roadmap {
+    margin-bottom: 4.375rem;
+    &__wrapper {
+      padding: 0 1.25rem;
+    }
+  }
+  .cards {
+    &__item {
+      transform: translateX(0) !important;
+    }
+  }
+}

@@ -2,14 +2,14 @@
   position: relative;
   z-index: 10;
   &__row {
-    display: flex;
-    grid-gap: rem(25);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem rem(24);
     margin-bottom: 2rem;
   }
   &__row-block {
     min-height: rem(480);
-    width: calc((100% / 4) - 17px);
+    width: 100%;
     padding: rem(45) 2rem;
     display: grid;
     align-items: flex-end;
@@ -28,11 +28,11 @@
       bottom: 0;
       background: var(--card-fade);
       width: 100%;
-      height: rem(240);
+      height: 40%;
       z-index: 5;
     }
     &_large {
-      width: calc((100% / 2) - 17px);
+      grid-column: span 2;
     }
     &:nth-child(1) {
       background-image: url('../../img/news-section/news-image-1.png');
@@ -85,6 +85,13 @@
     color: hsla(228, 3%, 68%, 1);
     border: 1px solid hsla(0, 0%, 100%, 0.1);
     transition: 200ms ease;
+    &_full {
+      width: 100%;
+      text-align: center;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+    }
     &:hover {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid hsla(0, 0%, 100%, 0.5);
@@ -104,21 +111,35 @@
     &__row-block {
       min-height: rem(350);
       padding: rem(20);
-      width: calc((100% / 2) - 8px);
       background-size: cover;
+      background-position: top;
+      grid-column: span 2;
       &:hover {
         background-size: cover;
       }
       &_full {
-        width: 100%;
+        grid-column: span 4;
         background-position: top;
       }
     }
   }
 }
 
+
 @include max-width($mobMq) {
   .news {
+    &__row-info-descr {
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        max-width: 11.25rem;
+        text-overflow: ellipsis;
+      }
+    }
+    &__show-more {
+      padding: 1rem;
+    }
     &__row-block {
       min-height: rem(300);
       &:nth-child(3) {
@@ -134,7 +155,22 @@
 @include max-width($smallMobMq) {
   .news {
     &__row-block {
-      width: 100%;
+      padding: 1.25rem 0.625rem;
     }
   }
+}
+
+@include max-width(25em) {
+  .news {
+    &__row-block {
+      grid-column: span 4;
+    }
+  }
+}
+
+.news-body {
+  background-image: url('../../img/news-section/bg-news-page.png');
+  background-position: top left;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }

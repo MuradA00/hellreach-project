@@ -2,6 +2,7 @@
   background: var(--bg-footer);
   position: relative;
   z-index: 20;
+  min-height: 2.5rem;
   &__body {
     padding: rem(48) 0 2rem;
     display: flex;

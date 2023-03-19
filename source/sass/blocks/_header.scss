@@ -5,6 +5,7 @@
   align-items: center;
   background: var(--bg-header);
   box-shadow: var(--header-shadow);
+  border-bottom: 1px solid rgba(var(--w-clr), .1);
   &__options {
     position: absolute;
     top: 50%;
@@ -49,9 +50,11 @@
     nav {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     ul {
       display: flex;
+      align-items: center;
       li {
         a, span {
           padding: rem(20) 2rem;
@@ -78,6 +81,7 @@
   }
   &__link {
     &_dropdown-link {
+      padding: 20px 32px!important;
       &:hover {
         img {
           transform: scaleY(-1);
@@ -137,6 +141,9 @@
     &__logo {
       transform: translate(0);
       position: initial;
+      &:hover {
+        transform: translate(0);
+      }
     }
     &__burger {
       display: grid;

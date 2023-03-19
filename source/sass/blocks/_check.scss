@@ -1,0 +1,33 @@
+.tracker {
+  &__check {
+
+    @include fl(row, center, 8px);
+    input[type=checkbox] {
+      flex: 0 0 auto;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      @include ratio(1.5rem);
+      background: rgba(var(--w-clr), 0.05);
+      border-radius: 8px;
+      position: relative;
+      &:checked {
+        background: var(--r-gradient);
+        &::before {
+          opacity: 1;
+        }
+      }
+      &::before {
+        @include psevdo;
+        @include center;
+        @include w-h(10px, 6px);
+        background-image: url('../../img/sprite/check-icon.svg');
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transition: inherit;
+        opacity: 0;
+      }
+    }
+  }
+}

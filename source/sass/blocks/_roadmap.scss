@@ -1,0 +1,16 @@
+.roadmap-page {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.roadmap {
+  margin-bottom: clamp(70px, 15vw, 15rem);
+  &__wrapper {
+    padding: clamp(32px, 4vw, 64px) 0;
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: clamp(26px, 2.875vw, 46px);
+  }
+}

@@ -1,0 +1,182 @@
+:root {
+  --user-ratio: 5.25rem;
+}
+
+@include max-width($tabletMq) {
+  :root {
+    --user-ratio: 3.4375rem;
+  }
+}
+
+.bug {
+  a {
+    &:hover {
+      filter: brightness(80%);
+    }
+  }
+  .table {
+    margin-bottom: clamp(32px, 3vw, 48px);
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: clamp(25px,2.875vw,46px);
+  }
+  &__box {
+    padding: 2rem 2rem clamp(2rem, 4vw, 64px) 2rem;
+    background-color: rgba(var(--pr-clr), 1);
+    border: 1px solid rgba(var(--w-clr), .05);
+  }
+  &__user-icon {
+    flex: 0 0 auto;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--w-clr), 0.05);
+    @include ratio(calc(var(--user-ratio) + (6px * 2)));
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 5;
+    img, svg, picture {
+      display: block;
+      border-radius: 50%;
+      @include ratio(var(--user-ratio));
+    }
+  }
+  &__output {
+    position: relative;
+    z-index: 5;
+  }
+  &__heading {
+    margin-bottom: 2rem;
+  }
+  &__box-head {
+    margin-bottom: 1rem;
+    font-family: var(--ff-lora);
+    font-size: clamp(26px, 2vw, 2rem);
+  }
+  &__link-block {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    span {
+      color: rgba(var(--gr-clr), 1);
+    }
+  }
+  &__link {
+    color: rgba(var(--r-clr), 1);
+  }
+  &__chat {
+    margin-bottom: 2rem;
+  }
+  &__message {
+    @include fl(row, flex-start, 1rem);
+    padding: 2rem;
+    background-color: rgba(var(--w-clr), 0.04);
+    border: 1px solid rgba(var(--w-clr), 0.1);
+    position: relative;
+    &_answer {
+      border: 1px solid rgba(var(--w-clr), 0.05);
+      background-color: rgba(var(--w-clr), 0.01);
+      &::before {
+        display: none;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 1.125rem;
+    }
+  }
+  &__message-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-image: url('../../img/bug-page/bg-message.png');
+    opacity: .15;
+    z-index: 5;
+  }
+  &__message-text {
+    margin-bottom: 10px;
+    a {
+      color: rgba(var(--r-clr), 1);
+    }
+  }
+  &__message-date {
+    color: rgba(var(--gr-clr), 0.4);
+    font-size: 14px;
+  }
+  &__send {
+    @include fl(row, flex-start, 1rem);
+    margin-bottom: 1.5rem;
+  }
+  &__input {
+    width: 100%;
+    textarea {
+      width: 100%;
+      background-color: rgba(var(--d-clr), 0.4);
+      border: 1px solid rgba(var(--w-clr), 0.05);
+      outline: none;
+      resize: none;
+      padding: 2rem;
+      color: rgba(var(--gr-clr), 1);
+      &::placeholder {
+        color: inherit;
+      }
+    }
+  }
+  &__button {
+    display: grid;
+    justify-content: flex-end
+  }
+}
+
+@include max-width($tabletMq) {
+  .bug {
+    .table {
+      margin-bottom: 1.375rem;
+    }
+    a {
+      font-size: 14px;
+      word-break: break-all;
+    }
+    &__box {
+      padding: 0.9375rem;
+    }
+    &__message-date {
+      font-size: 12px;
+    }
+    &__send {
+      margin-bottom: 0.625rem;
+      grid-gap: 7px;
+      flex-direction: column;
+    }
+    &__button {
+      justify-content: center;
+    }
+    &__message {
+      flex-direction: column;
+      padding: 1rem 0.9375rem;
+      grid-gap: 7px;
+    }
+    &__link-block {
+      span {
+        font-size: 0.875rem;
+      }
+    }
+    &__link {
+      font-size: .75rem !important;
+    }
+    &__message-text {
+      p {
+        font-size: 14px;
+      }
+    }
+    &__input {
+      textarea {
+        padding: 0.75rem;
+      }
+    }
+  }
+}

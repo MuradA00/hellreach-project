@@ -12,10 +12,12 @@ body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  letter-spacing: var(--ls);
   &::before {
     @include psevdo;
     width: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(13, 14, 14, .8);
     height: 100%;
     top: 0;
     left: 0;
@@ -64,6 +66,23 @@ html {
   min-height: -webkit-fill-available;
 }
 
+main {
+  flex: 1 1 auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 *,
 *::after,
 *::before {
@@ -72,6 +91,7 @@ html {
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 }
 
 a {
@@ -157,6 +177,24 @@ input[type="number"] {
   clip-path: inset(100%);
 }
 
+
+.main-padding {
+  padding-top: clamp(70px, 8.75vw, 140px);
+  position: relative;
+  h1 {
+    position: relative;
+    z-index: 5;
+  }
+  &::before {
+    @include psevdo;
+    top: 0;
+    left: 0;
+    height: 8.75rem;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(13, 14, 14, 0.6) 0%, rgba(13, 14, 14, 0) 100%);
+  }
+}
 
 
 
