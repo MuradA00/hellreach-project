@@ -1,4 +1,6 @@
 .community {
+  position: relative;
+  z-index: 5;
   &__body {
     background-color: hsla(169, 7%, 9%, 1);
     padding: rem(48) 2rem;

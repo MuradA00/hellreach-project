@@ -173,4 +173,29 @@
   background-position: top left;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
 }
+
+.top-wrapper {
+  position: relative;
+  padding-bottom: 1.25rem;
+  & > section {
+    position: relative;
+    z-index: 5;
+  }
+  .community {
+    margin-bottom: 0;
+  }
+  &::after {
+    @include psevdo;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    transform: scaleY(-1);
+    background: linear-gradient(180deg, rgba(13, 14, 14, 1) 0%, rgba(13, 14, 14, .5) 100%);
+  }
+}
+
+

@@ -7,19 +7,20 @@
 
 .news-page {
   &__main {
-    min-height: 33.125rem;
+    min-height: 30rem;
     display: grid;
     align-items: flex-end;
     background-image: url('../../img/news-page/bg-news.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-attachment: fixed;
+    background-position: 50% 100%;
     position: relative;
     &::after, &::before {
       @include psevdo;
       left: 0;
       width: 100%;
-      background: linear-gradient(180deg, rgba(13, 14, 14, 0.6) 0%, rgba(13, 14, 14, 0) 100%);
+      background: linear-gradient(180deg, rgba(13, 14, 14, 0.7) 0%, rgba(13, 14, 14, 0) 100%);
     }
     &::before {
       height: 26%;
