@@ -1,7 +1,7 @@
 const roadmapSlider = new Swiper('.roadmap__wrapper', {
   spaceBetween: 24,
   autoplay: {
-    delay: 2500,
+    delay: 6000,
     disableOnInteraction: true,
 },
   breakpoints: {
@@ -12,10 +12,7 @@ const roadmapSlider = new Swiper('.roadmap__wrapper', {
       slidesPerView: 3
     },
     1366: {
-      slidesPerView: 5
-    },
-    1660: {
-      slidesPerView: 6
+      slidesPerView: 4
     }
   }
 })

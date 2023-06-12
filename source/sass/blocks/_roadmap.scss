@@ -8,9 +8,14 @@
   margin-bottom: clamp(70px, 15vw, 15rem);
   &__wrapper {
     padding: clamp(32px, 4vw, 64px) 0;
+
+    &--slider {
+      padding-top: 4.625rem !important;
+    }
     overflow-x: scroll;
     &::-webkit-scrollbar {
       width: 9px;
+      height: 20px;
       background-color: rgba(var(--w-clr), 0.01);
       }
       &::-webkit-scrollbar-thumb {

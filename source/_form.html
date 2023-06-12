@@ -1,0 +1,104 @@
+<div class="wrapper-form">
+  <form action="form" class="form">
+    <button class="form__close-btn">
+      <span></span>
+      <span></span>
+    </button>
+    <div class="form__wrapper bug__box">
+      <div class="form__inner">
+        <div class="form__heading">
+          <div class="form__head">
+            Create a ticket
+          </div>
+          <p>
+            Quisque scelerisque massa vel congue tincidunt. Curabitur hendrerit scelerisque arcu, nec gravida lectus porta sed. Maecenas non lectus lorem. Nullam id erat eget elit efficitur convallis.
+          </p>
+        </div>
+        <div class="form__inputs">
+          <div class="form__inputs-item">
+            <input type="text" placeholder="Heading">
+          </div>
+          <div class="form__inputs-item">
+            <li class="dropdowns__item">
+              <div class="dropdowns__item-selected">
+                <span>
+                  Category
+                </span>
+                <img src="img/sprite/arrow-down.svg" alt="arrow-down">
+              </div>
+              <ul class="dropdowns__hidden">
+                <li class="dropdowns__hidden-item">
+                  Priority
+                </li>
+                <li class="dropdowns__hidden-item">
+                  Priority
+                </li>
+                <li class="dropdowns__hidden-item">
+                  Priority
+                </li>
+                <li class="dropdowns__hidden-item">
+                  Priority
+                </li>
+              </ul>
+            </li>
+          </div>
+          <div class="form__inputs-item">
+            <textarea placeholder="Description"></textarea>
+          </div>
+          <div class="form__inputs-item">
+            <input type="text" placeholder="Step 1">
+          </div>
+          <div class="form__inputs-item">
+            <input type="text" placeholder="Step 2">
+            <button class="form__clear">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <button class="form__add">
+            <span>
+              <img src="img/sprite/plus-icon.svg" alt="plus-icon">
+            </span>
+            Add a new step
+          </button>
+          <div class="form__inputs-item">
+            <textarea placeholder="Description"></textarea>
+          </div>
+          <div class="form__inputs-item">
+            <input type="text" placeholder="Link to video or image">
+          </div>
+          <div class="form__pattern">
+            <span class="form__pattern-line"></span>
+            or
+            <span class="form__pattern-line form__pattern-line--right"></span>
+          </div>
+          <div class="form__inputs-item form__inputs-item--file">
+            <label class="form__dd-file" for="upload">
+              <img src="img/sprite/paperclip-icon.svg" class="form__inputs-paper" alt="paperclip-icon">
+              <span class="form__dd-file-drop">Drag and drop files here</span>
+              <span class="form__dd-file-max">Maximum file size is 20MB </span>
+              <input type="file" id="upload">
+            </label>
+          </div>
+        </div>
+        <div class="form__agreement tracker__check">
+            <input id="closed-requests" type="checkbox">
+            <label for="closed-requests">
+              <p>
+                You confirm that you have reported everything you know about this error and included all the steps to reproduce this error in the development environment, read all the terms and conditions, searched for duplicates and confirm that this message is a unique report
+              </p>
+            </label>
+        </div>
+        <div class="form__buttons tracker__buttons">
+          <button class="tracker__reset" id="cancel">
+            <span>Cancel</span>
+          </button>
+          <button class="tracker__create btn" id="create-ticket">
+            <span>Create a ticket</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>

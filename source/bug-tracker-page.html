@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+
+<body>
+  @@include('_modal-login.html',{})
+  @@include('_modal-register.html',{})
+  @@include('_modal-success.html',{})
+  @@include('_header.html',{})
+  @@include('_menu.html',{})
+  <main class="main-padding news-body" style="background-image: url(img/bug-tracker/bug-tracker-bg.webp);">
+
+    <div class="top-wrapper">
+      @@include('_form.html',{})
+      @@include('_bug-tracker.html',{})
+    </div>
+
+    @@include('_offer.html',{})
+  </main>
+
+  @@include('_footer.html',{})
+  <script src="js/_modals.js"></script>
+  <script src="js/_burger.js"></script>
+  <script src="js/dropdowns.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/featuresSlider.js"></script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
     --ff-inter: 'Inter', sans-serif;
     --ff-lora: 'Lora', sans-serif;
     // COLORS
-    --bg-body: hsla(180, 4%, 5%, 1);
+    --bg-body: rgba(13, 14, 14, 1);
     --bg-footer: linear-gradient(180deg, #101212 0%, #151818 100%);
     --home-fade: linear-gradient(360deg, #0D0E0E 9.91%, rgba(13, 14, 14, 0) 42.73%);
     --card-fade: linear-gradient(360deg, rgba(22, 26, 25, 0.8) 0%, rgba(22, 26, 25, 0) 69.38%);
@@ -34,6 +34,16 @@
     --pr-clr: 22, 26, 25;
     --twitch-clr: 145, 70, 255;
     --r-clr: 233, 61, 37;
+    --invalid-state-text-clr: 234, 76, 55;
+    --invalid-state-bg: 233, 61, 37;
+    --testing-state-text-clr: 248, 198, 69;
+    --testing-state-bg: 234, 184, 55;
+    --pending-state-text-clr: 172, 173, 177;
+    --pending-state-bg: 108, 108, 108;
+    --confirmed-state-text-clr: 255, 108, 46;
+    --confirmed-state-bg: 234, 116, 31;
+    --fixed-state-text-clr: 38, 212, 76;
+    --fixed-state-bg: 19, 165, 51;
     --d-clr: 12, 14, 13;
 }
 
